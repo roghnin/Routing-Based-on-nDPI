@@ -1,0 +1,41 @@
+pusher=StaticFlowPusher('127.0.0.1')
+flow1={
+    "eth_type":"0x0800",
+    "cookie":"0",
+    "priority":"32768",
+    "active":"true",
+    "hard_timeout":"15",
+    "name":"flow_mod_1",
+    "switch":"00:00:00:00:00:00:00:01",
+    "ipv4_src":"10.0.0.1",
+    "ipv4_dst":"10.0.0.2",
+    "actions":"output=3"
+    }
+flow2={
+    "eth_type":"0x0800",
+    "cookie":"0",
+    "priority":"32768",
+    "active":"true",
+    "hard_timeout":"15",
+    "name":"flow_mod_2",
+    "switch":"00:00:00:00:00:00:00:03",
+    "ipv4_src":"10.0.0.1",
+    "ipv4_dst":"10.0.0.2",
+    "actions":"output=2"
+    }
+flow3={
+    "eth_type":"0x0800",
+    "cookie":"0",
+    "priority":"32768",
+    "active":"true",
+    "hard_timeout":"15",
+    "name":"flow_mod_3",
+    "switch":"00:00:00:00:00:00:00:04",
+    "ipv4_src":"10.0.0.1",
+    "ipv4_dst":"10.0.0.2",
+    "actions":"output=3"
+    }
+pusher.set(flow1)
+pusher.set(flow2)
+pusher.set(flow3)
+remain(15)
