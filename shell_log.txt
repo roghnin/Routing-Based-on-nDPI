@@ -1,2 +1,60 @@
-[2016-04-01 01:33:51]
-c6e670a1-43e1-4942-816e-d809a7815ec7
+[2016-04-09 02:35:39]
+
+-----------------------------------------------------------
+* NOTE: This is demo app to show *some* nDPI features.
+* In this demo we have implemented only some basic features
+* just to show you what you can do with the library. Feel 
+* free to extend it and send us the patches for inclusion
+------------------------------------------------------------
+
+Using nDPI (1.7.1-dev-342-4128faa) [1 thread(s)]
+Capturing live traffic from device s1-eth1...
+Capturing traffic up to 5 seconds
+Running thread 0...
+
+
+WARNING: only IPv4/IPv6 packets are supported in this demo (nDPI supports both IPv4 and IPv6), all other packets will be discarded
+
+upper : 192.168.199.210 , 46748 
+lower : 166.111.143.201 , 35603 
+after merge:container 0 from thread 0 :
+	192.168.199.210
+	166.111.143.201
+
+nDPI Memory statistics:
+	nDPI Memory (once):      105.91 KB    
+	Flow Memory (per flow):  1.88 KB      
+	Actual Memory:           1.94 MB      
+	Peak Memory:             1.94 MB      
+
+Traffic statistics:
+	Ethernet bytes:        6152          (includes ethernet CRC/IFC/trailer)
+	Discarded bytes:       440          
+	IP packets:            4             of 11 packets total
+	IP bytes:              6056          (avg pkt size 550 bytes)
+	Unique flows:          1            
+	TCP Packets:           4            
+	UDP Packets:           0            
+	VLAN Packets:          0            
+	MPLS Packets:          0            
+	PPPoE Packets:         0            
+	Fragmented Packets:    0            
+	Max Packet size:       1480         
+	Packet Len < 64:       0            
+	Packet Len 64-128:     0            
+	Packet Len 128-256:    0            
+	Packet Len 256-1024:   0            
+	Packet Len 1024-1500:  4            
+	Packet Len > 1500:     0            
+	nDPI throughput:       0.75 pps / 8.97 Kb/sec
+	Traffic throughput:    0.75 pps / 8.97 Kb/sec
+	Traffic duration:      5.359 sec
+	Guessed flow protos:   0            
+
+
+Detected protocols:
+	Unknown              packets: 4             bytes: 6056          flows: 1            
+
+
+Protocol statistics:
+	Unrated                       6056 bytes

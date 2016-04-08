@@ -44,7 +44,7 @@ def remain(min):
         print "\r\r\r"+out
 
 
-timeout=20
+timeout=40
 pusher=StaticFlowPusher('127.0.0.1')
 flow1={
     "eth_type":"0x0800",
@@ -54,23 +54,10 @@ flow1={
     "hard_timeout":str(timeout),
     "name":"flow_mod_1",
     "switch":"00:00:00:00:00:00:00:01",
-    #"ipv4_src":"10.0.0.1",
-    "ipv4_dst":"166.111.143.201",
-    "actions":"output=3"
-    }
-flow2={
-    "eth_type":"0x0800",
-    "cookie":"0",
-    "priority":"32768",
-    "active":"true",
-    "hard_timeout":str(timeout),
-    "name":"flow_mod_2",
-    "switch":"00:00:00:00:00:00:00:04",
-    "ipv4_src":"166.111.143.201",
-    #"ipv4_dst":"10.0.0.2",
-    "actions":"output=2"
+    "ipv4_src":"10.0.0.1",
+    "ipv4_dst":"10.0.0.2",
+    "actions":""
     }
 
 pusher.set(flow1)
-pusher.set(flow2)
 remain(timeout)
